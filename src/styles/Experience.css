@@ -1,0 +1,113 @@
+/* src/styles/Experience.css */
+.experience {
+  background: #1a1a2e;
+  color: #ffffff;
+  padding: 50px 64px; /* Reduced padding */
+  margin: 0 auto;
+  border-radius: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+  max-width: 1190px; /* Reduced the max-width for a smaller section */
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem; /* Center the section horizontally */
+  position: relative;
+  overflow: hidden;
+  
+}
+
+.experience-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Create 2 columns */
+  gap: 20px; /* Add space between the grid items */
+  position: relative;
+}
+
+.experience-item {
+  background: #2e2e3a;
+  padding: 20px; /* Increased padding inside the cards */
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  animation: fadeIn 0.5s ease;
+}
+
+.experience-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.experience-item h3 {
+  font-family: 'Poppins', sans-serif;
+  color: #4ecdc4;
+  margin-bottom: 12px; /* Reduced margin for a tighter layout */
+  font-size: 1.6rem; /* Increased font size */
+  position: relative;
+}
+
+.experience-item h3::after {
+  content: "";
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #ff6b6b;
+  transition: width 0.3s ease;
+}
+
+.experience-item:hover h3::after {
+  width: 100%;
+}
+
+.experience-item p {
+  font-family: 'Roboto', sans-serif;
+  color: #dddddd;
+  line-height: 1.5; /* Reduced line height for compact text */
+  margin-bottom: 8px;
+  font-size: 1.1rem; /* Adjusted font size */
+}
+
+.experience-item strong {
+  color: #f7d354;
+}
+
+@media (max-width: 768px) {
+  .experience {
+    padding: 35px 15px; /* Reduced padding for smaller screens */
+    max-width: 85%; /* Smaller section on mobile */
+  }
+
+  .experience-list {
+    grid-template-columns: 1fr; /* Single column for smaller screens */
+  }
+
+  .experience-item {
+    padding: 12px; /* Reduced padding for mobile */
+  }
+}
+.experience h2 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  color: #4ecdc4;
+  margin-bottom: 30px;
+  position: relative;
+  display: inline-block;
+}
+.experience h2::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 0;
+  width: 0;
+  height: 4px;
+  background:#ff6b6b;
+  transition: width 0.3s ease;
+}
+
+.experience:hover h2::after {
+  width: 100%;
+}
+
+/* Rest of the styles... */

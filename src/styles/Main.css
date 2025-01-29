@@ -1,0 +1,35 @@
+/* src/styles/Main.css */
+.main-container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Distribute space between items */
+    align-items: flex-start; /* Align items to the start */
+    margin: 20px; /* Add margin around the container */
+  }
+  
+  /* Define card styles */
+  .card {
+    background-color: #2c3e50; /* Dark background for cards */
+    color: white; /* Text color */
+    padding: 20px; /* Padding inside the card */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    margin: 10px; /* Space around cards */
+    flex: 1; /* Allow cards to grow equally */
+    min-width: 250px; /* Minimum width */
+    transition: transform 0.2s; /* Animation on hover */
+  }
+  
+  .card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+  }
+  
+  /* Optional: Background for the main container */
+  
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .main-container {
+      flex-direction: column; /* Stack the panels on smaller screens */
+    }
+  }
+  

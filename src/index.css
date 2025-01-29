@@ -1,0 +1,90 @@
+/* Reset some default styles for consistency */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Basic styling for the body */
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #f4f4f4;
+}
+
+/* General styling for links */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Remove bullets from lists */
+ul, ol {
+  list-style: none;
+}
+
+/* Styling for headers */
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+/* Container for layout */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Styling for the navigation bar */
+nav {
+  background-color: #ff6f61;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+}
+
+nav a {
+  color: #fff;
+  font-weight: bold;
+  margin: 0 1rem;
+  transition: color 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd700;
+}
+
+/* Sections styling */
+section {
+  padding: 2rem 0;
+}
+
+/* Button styles */
+button {
+  background-color: #ff6f61;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #e65c50;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  nav {
+    text-align: center;
+  }
+  
+  nav a {
+    display: block;
+    margin: 0.5rem 0;
+  }
+}

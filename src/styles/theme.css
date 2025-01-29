@@ -1,0 +1,24 @@
+/* src/styles/theme.css */
+:root {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --header-background: #f5f5f5;
+}
+
+[data-theme="dark"] {
+    --background-color: #121212;
+    --text-color: #ffffff;
+    --primary-color: #bb86fc;
+    --secondary-color: #03dac6;
+    --header-background: #333;
+}
+
+[data-theme="light"] {
+    --background-color: #ffffff;
+    --text-color: #000000;
+    --primary-color: #6a11cb;
+    --secondary-color: #2575fc;
+    --header-background: #f5f5f5;
+}

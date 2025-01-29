@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+.education {
+  padding: 5rem 8rem;
+  background-color: #0a192f;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  border-radius: 1rem; /* Curved corners for the entire section */
+  margin: 2rem;
+}
+
+.education-container {
+  max-width: 850px;
+  width: 100%;
+  padding: 3rem;
+  background: rgba(10, 25, 47, 0.85);
+  border-radius: 1.5rem; /* Curved corners for the container */
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(10px);
+  animation: float 7s ease-in-out infinite;
+}
+
+.education h2 {
+  text-align: center;
+  color: #00bcd4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  position: relative;
+  text-shadow: 0 0 15px rgba(0, 188, 212, 0.4);
+}
+
+.education h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 4px;
+  background: #ec4899;
+  border-radius: 2px;
+  animation: expand 0.5s ease-out forwards;
+}
+
+@keyframes expand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px;
+  }
+}
+
+.timeline {
+  position: relative;
+  padding-left: 3rem;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 2px;
+  background: linear-gradient(to bottom, #00bcd4, #ff4081);
+  animation: growLine 1.5s ease-out forwards;
+}
+
+@keyframes growLine {
+  0% {
+    height: 0;
+  }
+  100% {
+    height: 100%;
+  }
+}
+
+.timeline-item {
+  position: relative;
+  padding-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInSlide 0.8s ease-out forwards;
+}
+
+.timeline-item:nth-child(1) { animation-delay: 0.2s; }
+.timeline-item:nth-child(2) { animation-delay: 0.4s; }
+.timeline-item:nth-child(3) { animation-delay: 0.6s; }
+
+@keyframes fadeInSlide {
+  0% {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.timeline-dot {
+  position: absolute;
+  left: -2rem;
+  top: 0.7rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background: #00bcd4;
+  border-radius: 50%;
+  border: 3px solid #0a192f;
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.5);
+  transition: all 0.3s ease;
+}
+
+.timeline-dot::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 2.4rem;
+  height: 2.4rem;
+  background: rgba(0, 188, 212, 0.2);
+  border-radius: 50%;
+  animation: pulse 2.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(2);
+    opacity: 0;
+  }
+}
+
+.timeline-content {
+  background: rgba(24, 38, 59, 0.85);
+  padding: 1.8rem;
+  border-radius: 0.8rem;
+  margin-left: 1.2rem;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(0, 188, 212, 0.2);
+}
+
+.timeline-content::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(120deg, transparent, rgba(0, 188, 212, 0.1), transparent);
+  transition: 0.5s;
+}
+
+.timeline-content:hover {
+  transform: translateY(-7px) scale(1.05);
+  box-shadow: 0 15px 25px rgba(0, 188, 212, 0.15);
+  border-color: rgba(0, 188, 212, 0.4);
+}
+
+.timeline-content:hover::before {
+  left: 100%;
+}
+
+.timeline-content h3 {
+  color: #00bcd4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.35rem;
+  font-weight: 600;
+  margin-bottom: 0.6rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover h3 {
+  transform: translateX(5px);
+  text-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+}
+
+.timeline-content a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  display: block;
+  margin-bottom: 0.9rem;
+}
+
+.timeline-content a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #00bcd4;
+  transition: width 0.3s ease;
+}
+
+.timeline-content a:hover {
+  color: #00bcd4;
+  transform: translateX(5px);
+}
+
+.timeline-content a:hover::after {
+  width: 100%;
+}
+
+.timeline-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+}
+
+.timeline-content:hover .timeline-info {
+  transform: translateY(-3px);
+}
+
+.timeline-info span {
+  color: #b0c1d1;
+}
+
+.timeline-info .score {
+  color: #ff9800;
+  font-weight: 600;
+  position: relative;
+}
+
+.timeline-info .score::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #ff9800;
+  transition: width 0.3s ease;
+}
+
+.timeline-content:hover .score::after {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .education {
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem; /* Adjust border-radius for smaller screens */
+  }
+
+  .education-container {
+    padding: 1.5rem;
+    border-radius: 1rem; /* Adjust border-radius for smaller screens */
+  }
+
+  .education h2 {
+    font-size: 2.3rem;
+  }
+
+  .timeline {
+    padding-left: 1.5rem;
+  }
+
+  .timeline-dot {
+    left: -1.8rem;
+  }
+
+  .timeline-content {
+    padding: 1.3rem;
+  }
+}
+
+.education h2 {
+  text-align: center; /* Keep text center-aligned */
+  color: #06b6d4;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.5rem;
+  font-weight: 600;
+  margin-bottom: 2rem; /* Reduced bottom margin to give better spacing */
+  position: relative;
+  text-shadow: 0 0 10px rgba(6, 182, 212, 0.3);
+}
+
+.education h2::after {
+  content: '';
+  position: absolute;
+  bottom: -5px; /* Adjusted to ensure it's properly placed below the heading */
+  left: 50%;
+  transform: translateX(-50%); /* Keep the underline centered */
+  width: 60px;
+  height: 4px;
+  background: #ec4899;
+  border-radius: 2px;
+  animation: expand 0.5s ease-out forwards;
+}
+
+@keyframes expand {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 60px;
+  }
+}
