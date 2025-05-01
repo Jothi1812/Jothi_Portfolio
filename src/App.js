@@ -27,6 +27,7 @@
 
 // export default App;
 
+import { BrowserRouter } from 'react-router-dom';
 import React from 'react';
 import Header from './components/Header';
 import About from './components/About';
@@ -40,6 +41,7 @@ import './App.css';
 
 function App() {
   return (
+    <BrowserRouter>
     <div className="App">
       <Header />
       <About />
@@ -50,6 +52,7 @@ function App() {
       <Achievements />
       <Contact />
     </div>
+    </BrowserRouter>
   );
 }
 
